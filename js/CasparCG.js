@@ -981,9 +981,9 @@ var CasparCG = (function (_super) {
      * @todo	implement
      * @todo	document
      */
-    CasparCG.prototype.swap = function () {
+    CasparCG.prototype.swap = function (channel1, other, layer1) {
         // @todo: overloading of origin/destination pairs
-        return this.do(new AMCP_1.AMCP.SwapCommand());
+        return this.do(new AMCP_1.AMCP.SwapCommand({ channel: channel1, layer: layer1, other: other }));
     };
     /**
      * @todo	implement

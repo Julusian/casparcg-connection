@@ -487,10 +487,7 @@ export declare namespace AMCP {
      */
     class SwapCommand extends AbstractChannelOrLayerCommand {
         static readonly commandString: string;
-        /**
-         *
-         */
-        constructor();
+        paramProtocol: ParamNS.ParamSignature[];
     }
     /**
      *

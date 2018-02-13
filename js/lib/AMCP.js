@@ -1195,13 +1195,12 @@ var AMCP;
      */
     var SwapCommand = (function (_super) {
         __extends(SwapCommand, _super);
-        /**
-         *
-         */
         function SwapCommand() {
-            return _super.call(this, '1-1') || this; // @todo: foo
-            // @todo: custom parameters dual layerOrchannel with 1 optional param
-            // overloading in method
+            var _this = _super !== null && _super.apply(this, arguments) || this;
+            _this.paramProtocol = [
+                new ParamSignature(required, 'other', null, new ParamValidators_1.Validation.StringValidator()),
+            ];
+            return _this;
         }
         SwapCommand.commandString = 'SWAP';
         return SwapCommand;

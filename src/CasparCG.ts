@@ -1497,9 +1497,9 @@ export class CasparCG extends EventEmitter implements ICasparCGConnection, Conne
 	 * @todo	implement
 	 * @todo	document
 	 */
-  public swap (): Promise<IAMCPCommand> {
+  public swap (channel1: number, other: string, layer1?: number): Promise<IAMCPCommand> {
 		// @todo: overloading of origin/destination pairs
-    return this.do(new AMCP.SwapCommand())
+    return this.do(new AMCP.SwapCommand({channel: channel1, layer: layer1, other: other}))
   }
 
 	/**

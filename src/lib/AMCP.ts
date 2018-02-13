@@ -1023,15 +1023,9 @@ export class CallCommand extends AbstractLayerWithFallbackCommand {
 export class SwapCommand extends AbstractChannelOrLayerCommand {
   static readonly commandString = 'SWAP'
 
-		/**
-		 *
-		 */
-  constructor () {
-    super('1-1') // @todo: foo
-			// @todo: custom parameters dual layerOrchannel with 1 optional param
-			// overloading in method
-  }
-
+  paramProtocol = [
+    new ParamSignature(required, 'other', null, new ParameterValidator.StringValidator()),
+  ]
 }
 
 	/**

@@ -871,7 +871,7 @@ export declare class CasparCG extends EventEmitter implements ICasparCGConnectio
      * @todo	implement
      * @todo	document
      */
-    swap(): Promise<IAMCPCommand>;
+    swap(channel1: number, other: string, layer1?: number): Promise<IAMCPCommand>;
     /**
      * @todo	implement
      * @todo	document
